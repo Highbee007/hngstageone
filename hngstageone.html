@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="Author" content="Highbee" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <!--Nav bar for mobile screen-->
+      <nav>
+        <a href="#highbee">Highbee</a>
+        <a href="#goals">GOALs</a>
+        <a href="hng.tech/learn." data-testid="hngLink">HNG 11</a>
+        <a href="http://keyword.dog" data-testid="keywordLink">KEYWORD</a>
+        <a href="http://scrapeanyweb.site" data-testid="scrapeanywebLink"
+          >ScrapeAnyWeb</a
+        >
+      </nav>
+    </header>
+    <main>
+      <div class="content">
+        <div class="frame">
+          <!--Photo Frame-->
+          <div class="photo">
+            <img
+              id="highbee"
+              src="https://ca.slack-edge.com/T07466B189M-U07A7B92WSH-g03a7cc5e439-512"
+              alt="Picture of Highbee"
+            />
+            <div class="info">
+              <h2 data-testid="slackDisplayName">HIGHBEE</h2>
+              <p>FrontEnd Developer - <i>Interning at <a href="https://hng.tech/internship">HNG</a> Internship</i></p>
+              <h2 data-testid="slackEmail">Ibrahimdamilola43@gmail.com</h2>
+            </div>
+          </div>
+          <!--frame stand-->
+          <div class="springs">
+            <div class="spring"></div>
+            <div class="spring"></div>
+            <div class="spring"></div>
+            <div class="spring"></div>
+          </div>
+        </div>
+
+        <div class="content-main">
+          <div>
+            <!--Declearing Tech Goals-->
+            <div class="day-time">
+              <span data-testid="currentTimeUTC" id="current-time"></span>
+              <div data-testid="currentDay" id="current-day">Monday</div>
+            </div>
+          </div>
+          <fieldset class="goal">
+            <legend><h2>My 2 years Goals in Tech Field</h2></legend>
+            <h3>Skil Development</h3>
+            <p>Identifying more Programming Languages and Libraries framework and master them</p>
+            <h3>Internship</h3>
+            <p>Aiming for more internship Programs, which is a great way to gain practical and challenging experience, futher develop my skill and gain some certification</p>
+            <h3>Career Advancement</h3>
+            <p>Aiming more to be a Full-stack Developer, switching to more challenging role</p>
+            <h3>Networking</h3>
+            <p>Expand my network through Internships, conferences, Online communities and so on</p>
+            <h3>Projects</h3>
+            <p>Completing personal or Open-source Projects</p>
+          </fieldset>
+        </div>
+      </div>
+      <script>
+        function updateTimeAndDay() {
+          var now = new Date();
+
+          // Get and format time
+          var hours = now.getHours().toString().padStart(2, "0");
+          var minutes = now.getMinutes().toString().padStart(2, "0");
+          var seconds = now.getSeconds().toString().padStart(2, "0");
+          var timeString = hours + ":" + minutes + ":" + seconds;
+          document.getElementById("current-time").textContent = timeString;
+
+          // Get and format day of the week
+          var daysOfWeek = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ];
+          var dayString = daysOfWeek[now.getDay()];
+          document.getElementById("current-day").textContent = dayString;
+        }
+
+        // Update time, day, and date every second
+        setInterval(updateTimeAndDay, 1000);
+
+        // Initial update
+        updateTimeAndDay();
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>
