@@ -212,37 +212,7 @@ main {
           </fieldset>
         </div>
       </div>
-      <script>
-        function updateTimeAndDay() {
-          var now = new Date();
 
-          // Get and format time
-          var hours = now.getHours().toString().padStart(2, "0");
-          var minutes = now.getMinutes().toString().padStart(2, "0");
-          var seconds = now.getSeconds().toString().padStart(2, "0");
-          var timeString = hours + ":" + minutes + ":" + seconds;
-          document.getElementById("current-time").textContent = timeString;
-
-          // Get and format day of the week
-          var daysOfWeek = [
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-          ];
-          var dayString = daysOfWeek[now.getDay()];
-          document.getElementById("current-day").textContent = dayString;
-        }
-
-        // Update time, day, and date every second
-        setInterval(updateTimeAndDay, 1000);
-
-        // Initial update
-        updateTimeAndDay();
-      </script>
     </main>
     <footer></footer>
   </body>
